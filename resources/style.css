@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+
+header {
+    height: 14vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-family: 'Raleway', sans-serif;
+    padding: 1rem;
+    background-color: #77777759;
+}
+
+header .titlePage {
+    background-color: aquamarine;
+    padding: .5rem 1rem;
+    border-radius: 25px;
+}
+
+header .score {
+    background-color: #000000;
+    color: white;
+    padding: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 0 5px gray;
+    margin-left: -6rem;
+    text-shadow: pink 0 0 5px;
+}
+
+header .scoreAmount {
+    position: relative;
+    left: 1rem;
+    padding: 1rem;
+    box-shadow: inset 0 0 10px #b6b4b4b9, inset 0 0 20px #e4e4e4af;
+    border-radius: 25px;
+    background-color: #77777759;
+    text-shadow: rgb(238, 255, 85) 0 0 5px;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+    height: 81vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .questionDiv {
+    padding: 1vh 0;
+    font-size: 1.5rem;
+}
+
+main .answerDiv {
+    height: 70vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 45vw);
+    grid-template-rows: repeat(2, 30vh);
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+main .answerDiv .posibbleAnswer{
+    width: 100%;
+    height: 100%;
+    background-color: #67858d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    transition: .2s background-color linear;
+}
+
+main .answerDiv .posibbleAnswer:disabled {
+    background: black;
+}
+
+main .answerDiv .posibbleAnswer:hover, main .answerDiv .posibbleAnswer:focus {
+    background-color: #27505e;
+    cursor: pointer;
+}
+
+main .answerDiv .posibbleAnswer .answerParagraph {
+    font-size: 2rem;
+    color: white;
+    transition: text-shadow .2s linear;
+}
+
+main .answerDiv .posibbleAnswer:hover .answerParagraph{
+    text-shadow: 0 0 15px pink
+}
+
+footer{
+    position: absolute;
+    right: 8vw;
+    bottom: 1vh;
+}
+
+footer .answerBtn {
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem;
+    border-radius: 100%;
+    border: 1px transparent solid;
+    background-color: #0a2229;
+    color: white;
+}
+
+footer .answerBtn:disabled {
+    border-radius: 100%;
+    border: 1px transparent solid;
+    background-color: #b5bcbe;
+    color: #858585;
+}
